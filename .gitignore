@@ -1,0 +1,6 @@
+build/
+hud/light_ctl/bin/
+hud/light_ctl/obj/
+hud/light_hud/bin/
+hud/light_hud/obj/
+**/.vs

@@ -1,0 +1,7 @@
+{
+    "board": "arduino:avr:uno",
+    "programmer": "arduino:avrisp",
+    "output": "./build",
+    "sketch": "light_control\\light_control.ino",
+    "port": "COM27"
+}

@@ -1,0 +1,43 @@
+﻿<Window x:Name="MainWindow1" x:Class="light_hud.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:light_hud"
+        mc:Ignorable="d"
+        Title="mRGBConsole" Height="450" Width="800" KeyDown="MainWindow1_KeyDown">
+    <Grid Height="435">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="369*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="150"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="labelShowCom1" Content="Com:" Grid.Row="0" Grid.ColumnSpan="2"/>
+        <Label x:Name="labelShowLast1" Content="{Binding lastButton, ElementName=MainWindow1}" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <DockPanel Grid.Row="2" Grid.ColumnSpan="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="style0" Content="(Q)Reset" FontSize="36" Click="style0_Click"/>
+                <Button x:Name="style1" Content="(W)Style1" FontSize="36" Grid.Row="0" Grid.Column="1" Click="style1_Click">
+                </Button>
+            </Grid>
+        </DockPanel>
+        <TextBox x:Name="consoleInfo1" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" Grid.Row="3" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True" Grid.ColumnSpan="2"/>
+        <WindowsFormsHost Grid.Column="1" Margin="288,12,82,53" Grid.Row="2"/>
+    </Grid>
+</Window>
